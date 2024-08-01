@@ -1,0 +1,55 @@
+<div class="container">
+  <mat-card>
+    <mat-card-title>Welcome to the Troy Public Library</mat-card-title>
+    <mat-card-content>
+      <p>We are here to be kind, be flexible, kick ass and chew bubblegum. And we are all out of bubblegum...</p>
+    </mat-card-content>
+  </mat-card>
+
+  <section class="featured-books">
+    <h2>Featured Books</h2>
+    <div class="book-list">
+      <mat-card class="book">
+        <!--<img mat-card-image src="book1.jpg" alt="Book 1">-->
+        <mat-card-title>Book Title 1</mat-card-title>
+      </mat-card>
+      <mat-card class="book">
+        <!--<img mat-card-image src="book2.jpg" alt="Book 2">-->
+        <mat-card-title>Book Title 2</mat-card-title>
+      </mat-card>
+      <mat-card class="book">
+        <!--<img mat-card-image src="book3.jpg" alt="Book 3">-->
+        <mat-card-title>Book Title 3</mat-card-title>
+      </mat-card>
+    </div>
+  </section>
+
+  <section class="library-table">
+    <h2>All Books in the Library</h2>
+    <!--<mat-form-field appearance="outline" class="search-box">
+      <mat-label>Search books...</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search by title or author">
+    </mat-form-field>-->
+
+    <table mat-table *ngFor="let book of bookcollection" class="mat-elevation-z8">
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Title </th>
+        <td mat-cell *matCellDef="let book"> {{book.title}}  </td>
+      </ng-container>
+
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef> Author </th>
+        <td mat-cell *matCellDef="let book"> {{book.Author}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Year </th>
+        <td mat-cell *matCellDef="let book"> {{book.Description}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </section>
+</div>
+

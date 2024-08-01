@@ -1,0 +1,63 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+mat-card {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.featured-books {
+  margin-top: 40px;
+}
+
+  .featured-books h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+.book-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book {
+  width: 30%;
+}
+
+.library-table {
+  margin-top: 60px;
+}
+
+  .library-table h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+.search-box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+}
